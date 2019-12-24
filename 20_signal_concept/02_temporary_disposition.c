@@ -2,7 +2,7 @@
  * Created by    : Rahul Kumar Nonia
  * File name     : 02_temporary_disposition.c
  * Created on    : Saturday 30 November 2019 12:54:38 PM IST
- * Last modified : Saturday 30 November 2019 01:17:08 PM IST
+ * Last modified : Saturday 30 November 2019 02:09:48 PM IST
  * Description   : temporary installing and removing signal disposition.
  * 					
  * 				   It is not possible to use signal() to retrieve the 
@@ -20,9 +20,9 @@ int flag = 0;
 // signal handler
 void newhandler (int sig)
 {
+	flag++;
 	printf ("Signal caught SIGINT with sig_no: %d\n	\
-			setting flag to 1\n", sig);
-	flag = 1;
+			setting flag to %d\n", sig, flag);
 }
 
 int main()
@@ -37,7 +37,7 @@ int main()
 	}
 
 	while(1){
-		if (flag == 1)
+		if (flag == 5)
 			break;
 	}
 	
