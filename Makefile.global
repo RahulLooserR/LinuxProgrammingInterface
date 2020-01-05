@@ -1,0 +1,20 @@
+# -*- Makefile -*-
+# this makefile contains global declaration used for all makefiles
+
+TOP_DIR = ..
+INCL_DIR = $(TOP_DIR)/include
+SRC_DIR = $(TOP_DIR)/src 
+UTIL_LIB = $(TOP_DIR)/lib/libutilities.a
+
+LIB_FLAG = -lm
+
+FLAGS = -g -I${INCL_DIR}     \
+		-Wall                \
+		-W                   \
+		-Wpointer-arith      \
+		-Wmissing-prototypes \
+		-Wno-sign-compare    \
+
+CFLAGS = ${FLAGS}
+USE_LIB = ${UTIL_LIB} ${LIB_FLAG}
+RM = rm -f

@@ -2,7 +2,7 @@
  * Created by    : Rahul Kumar Nonia
  * File name     : 01_changing_signal_disposition.c
  * Created on    : Saturday 30 November 2019 12:37:57 PM IST
- * Last modified : Saturday 30 November 2019 12:53:41 PM IST
+ * Last modified : Sunday 05 January 2020 08:57:14 PM IST
  * Description   : changing signal disposition using signal() system call
  *                 void (*signal (int sig, void (*handler)(int))(int)
  *                 			returns-> signal disposition
@@ -16,9 +16,8 @@
  * ***********************************************************************/
 	
 
-#include <stdio.h>
 #include <signal.h>
-#include <stdlib.h>
+#include "utilities.h"
 
 // signal handler function
 static void sig_handler (int sig)
@@ -29,10 +28,8 @@ static void sig_handler (int sig)
 int main()
 {	
 	// installing signal handler
-	if (signal(SIGINT, sig_handler) == SIG_ERR){
-		perror("Error Signal! \n");
-		exit (1);
-	}
+	if (signal(SIGINT, sig_handler) == SIG_ERR)
+		error_exit("Error signal !!\n");
 
 	while (1);
 
