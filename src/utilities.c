@@ -13,3 +13,11 @@ void error_exit(char *msg)
 	perror(msg);
 	exit(1);
 }
+
+void check_status(int result, const char*msg)
+{
+	if(result == -1){
+		perror(msg);
+		exit(EXIT_FAILURE);
+	}
+}

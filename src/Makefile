@@ -9,4 +9,4 @@ allgen :
 
 .PHONY: clean
 clean:
-	${RM} *.o ${EXECUTABLES}
+	${RM} *.o ${EXECUTABLES} ${UTIL_LIB}

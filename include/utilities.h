@@ -11,8 +11,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#define BUFFER_SIZE 256
 
 void error_exit(char *msg);
-
+void check_status(int result, const char*msg);
 
 #endif

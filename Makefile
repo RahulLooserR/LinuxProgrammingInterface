@@ -2,7 +2,8 @@
 #  Makefile for building the code
 
 DIRS = src 						\
-	   20_signal_concept
+	   20_signal_concept        \
+	   44_pipes
 
 # target for building codes in every subdirectories
 
