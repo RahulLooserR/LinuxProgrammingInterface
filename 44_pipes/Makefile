@@ -2,8 +2,8 @@
 
 include ../Makefile.global
 
-EXECUTABLES = 01_pipe_demo	
-
+EXECUTABLES = 01_pipe_demo  \
+			  02_redirection
 
 all:
 	@ for item in ${EXECUTABLES}; do \
